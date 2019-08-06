@@ -1,7 +1,7 @@
-object Form4: TForm4
+object FormPrincipal: TFormPrincipal
   Left = 0
   Top = 0
-  Caption = 'Form4'
+  Caption = 'Tela inicial'
   ClientHeight = 201
   ClientWidth = 447
   Color = clBtnFace

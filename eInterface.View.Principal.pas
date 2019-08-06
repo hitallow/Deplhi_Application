@@ -11,7 +11,7 @@ uses
   Vcl.ExtCtrls;
 
 type
-  TForm4 = class(TForm)
+  TFormPrincipal = class(TForm)
     btn_cria: TButton;
     Nome: TEdit;
     sobrenome: TEdit;
@@ -32,7 +32,7 @@ type
   end;
 
 var
-  Form4: TForm4;
+  FormPrincipal: TFormPrincipal;
 
 implementation
 
@@ -41,7 +41,7 @@ uses
 
 {$R *.dfm}
 
-procedure TForm4.cm_tipoPessoaChange(Sender: TObject);
+procedure TFormPrincipal.cm_tipoPessoaChange(Sender: TObject);
 begin
   case cm_tipoPessoa.ItemIndex of
     0:
@@ -52,7 +52,7 @@ begin
 
 end;
 
-procedure TForm4.cm_tipoPessoaClick(Sender: TObject);
+procedure TFormPrincipal.cm_tipoPessoaClick(Sender: TObject);
 begin
   btn_cria.Enabled := True;
   case cm_tipoPessoa.ItemIndex of
@@ -63,18 +63,18 @@ begin
   end;
 end;
 
-procedure TForm4.FormCreate(Sender: TObject);
+procedure TFormPrincipal.FormCreate(Sender: TObject);
 begin
   // FPessoa := TControllerPessoa.new.Pessoa(tpPessoaJuridica);
   ReportMemoryLeaksOnShutdown := True;
 end;
 
-procedure TForm4.addInMemo(value: string);
+procedure TFormPrincipal.addInMemo(value: string);
 begin
   Logs.Lines.Add(value);
 end;
 
-procedure TForm4.btn_criaClick(Sender: TObject);
+procedure TFormPrincipal.btn_criaClick(Sender: TObject);
 begin
 
   FPessoa.Nome(Nome.Text).sobrenome(sobrenome.Text).setDisplay(addInMemo)

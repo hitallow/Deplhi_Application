@@ -98,12 +98,19 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <DCCReference Include="eInterface.Controller.Interfaces.pas"/>
+        <DCCReference Include="eInterface.Controller.Pessoa.pas"/>
+        <DCCReference Include="eInterface.Model.Interfaces.pas"/>
+        <DCCReference Include="eInterface.Model.Pessoa.Factory.pas"/>
+        <DCCReference Include="eInterface.Model.PessoaFisica.pas"/>
+        <DCCReference Include="eInterface.Model.PessoaJuridica.pas"/>
         <DCCReference Include="eInterface.View.Principal.pas">
-            <Form>Form4</Form>
+            <Form>FormPrincipal</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="eInterface.Model.Interfaces.pas"/>
-        <DCCReference Include="eInterface.Model.Pessoa.pas"/>
+        <None Include="Project4.dpr"/>
+        <None Include="Project4.dproj.local"/>
+        <None Include="Project4.identcache"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
@@ -129,6 +136,24 @@
                 <DeployFile LocalName="Win32\Debug\Project4.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
                         <RemoteName>Project4.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Project4.dpr" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Project4.dproj.local" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Project4.identcache" Configuration="Debug" Class="ProjectFile">
+                    <Platform Name="Win32">
+                        <RemoteDir>.\</RemoteDir>
                         <Overwrite>true</Overwrite>
                     </Platform>
                 </DeployFile>
